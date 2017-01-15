@@ -17,6 +17,7 @@ and open the template in the editor.
 
             foreach($students as $student)
                 echo $student->toString();
+            
             $first = new Student();
             $first->surname = "Doe";
             $first->first_name = "John";
@@ -36,7 +37,18 @@ and open the template in the editor.
             $second->add_grade(80);
             $second->add_grade(50);
             $students['a456'] = $second;
-
+            $myself = new Student();
+            $myself->surname = "Liao";
+            $myself->first_name = "junfeng";
+            $myself->add_email('home','ljf920727@gmail.com');
+            $myself->add_email('work', 'ljf920727@gmail.com');
+            $myself->add_grade('85');
+            $myself->add_grade('95');
+            $students['ljf92']=$myself;
+            
+            ksort($students);//one of the many sort functions
+            
+            
         ?>
     </body>
 </html>
