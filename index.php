@@ -10,13 +10,11 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-       <?php
+        <?php
             include('Student.php');
 
             $students = array();
-
-            foreach($students as $student)
-                echo $student->toString();
+        
             
             $first = new Student();
             $first->surname = "Doe";
@@ -48,7 +46,9 @@ and open the template in the editor.
             
             ksort($students);//one of the many sort functions
             
-            
+
+            foreach($students as $student)
+                echo $student->toString();
         ?>
     </body>
 </html>
